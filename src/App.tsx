@@ -1,11 +1,13 @@
-import './App.css'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
-    <>
-      printf("%s", HelloWorld);
-    </>
+   <div className='bg-[#11110F]  relative overflow-x-hidden'>
+   <Navbar/>
+   <Hero/>
+   </div>
   )
 }
 

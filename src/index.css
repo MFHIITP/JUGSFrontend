@@ -1,1 +1,63 @@
-@import "tailwindcss()";
+@import "tailwindcss";
+
+
+/* ---------------for navbar-------------- */
+.nav-itemMobile {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: calc( 0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateX(50px); /* Initial transform state */
+}
+
+.nav-itemMobile.is-visible {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.nav-itemMobile.is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateX(50px);
+}
+.close-itemMobile {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: calc( 0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateY(-50px); /* Initial transform state */
+}
+
+.close-itemMobile.icon-is-visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+.close-itemMobile.icon-is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.navButtonAuth {
+  transition: opacity 2s, transform 1.5s; 
+  transition-delay: 1s;
+  /* opacity: 0; */
+  transform: translateX(50px); /* Initial transform state */
+}
+
+.navButtonAuth.is-visible {
+  opacity: 1;
+  transform: translateX(0); 
+}
+.navButtonAuth.is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+
+@layer utilities {
+    .maxWidthForSections{
+    @apply 2xl:max-w-[1280px] xl:max-w-[1200px] mx-auto xl:px-0 px-[3vw] sm:px-[5vw]
+  }
+  .nav-item { 
+    @apply transition-all ease-in-out duration-300 hover:scale-110 font-medium ;
+  }
+}
