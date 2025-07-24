@@ -4,10 +4,9 @@ import Navbar from './components/Navbar'
 function App() {
 
   return (
-   <div className='bg-[#11110F]  relative overflow-x-hidden'>
-   <Navbar/>
-   <Hero/>
-   </div>
+    <div className='bg-black'>
+      printf("%s", HelloWorld);
+    </div>
   )
 }
 
